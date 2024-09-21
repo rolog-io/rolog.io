@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset>
+    <file>./inc/</file>
+    <file>./src/</file>
+    <file>./tests/</file>
+
+    <arg value="sp"/>
+    <config name="testVersion" value="8.3-"/>
+
+    <rule ref="Inpsyde">
+        <exclude name="WordPress.PHP.DevelopmentFunctions.prevent_path_disclosure_error_reporting"/>
+        <exclude name="WordPress.PHP.DiscouragedPHPFunctions.runtime_configuration_error_reporting"/>
+        <exclude name="WordPress.Security.EscapeOutput"/>
+    </rule>
+
+    <rule ref="Inpsyde.CodeQuality.Psr4">
+        <properties>
+            <property
+                name="psr4"
+                type="array"
+                value="
+                    RologIo=>src,
+                    RologIo\Tests=>tests/src|tests/cases
+                "
+            />
+        </properties>
+    </rule>
+
+    <rule ref="Squiz.PHP.Eval.Discouraged">
+        <exclude-pattern>./tests/</exclude-pattern>
+    </rule>
+</ruleset>

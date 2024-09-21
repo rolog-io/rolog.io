@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/infection/infection/0.28/resources/schema.json",
+    "source": {
+        "directories": [
+            "src/",
+            "inc/"
+        ]
+    },
+    "logs": {
+        "html": "infection.html"
+    },
+    "mutators": {
+        "@default": true,
+        "AssignCoalesce": {
+            "ignore": [
+                "RologIo\\Utils\\Reflector",
+                "RologIo\\Utils\\Option",
+            ]
+        },
+        "ConcatOperandRemoval": {
+            "ignore": [
+                "RologIo\\Utils\\Option::assertNonEmptyString"
+            ]
+        },
+        "Concat": {
+            "ignore": [
+                "RologIo\\Utils\\Option::assertNonEmptyString"
+            ]
+        },
+        "IncrementInteger": {
+            "ignore": [
+                "RologIo\\ListenerProvider::addListenerByPriority",
+                "RologIo\\Utils\\Reflector::reflectListener",
+            ]
+        },
+        "DecrementInteger": {
+            "ignore": [
+                "RologIo\\ListenerProvider::addListenerByPriority"
+            ]
+        },
+        "GreaterThanOrEqualTo": {
+            "ignore": [
+                "RologIo\\ListenerProvider::addListenerByPriority"
+            ]
+        },
+        "MethodCallRemoval": {
+            "ignore": [
+                "RologIo\\ListenerProvider::yieldFromQueue"
+            ]
+        },
+        "Break_": {
+            "ignore": [
+                "RologIo\\EventDispatcher::dispatch",
+                "RologIo\\ListenerProvider::yieldFromQueue"
+            ]
+        }
+    }
+}

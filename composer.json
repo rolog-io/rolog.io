@@ -1,0 +1,47 @@
+{
+    "name": "rolog.io/rolog.io",
+    "description": "A simple PSR-14 implementation",
+    "require": {
+        "php": ">= 8.3 < 8.4",
+        "psr/event-dispatcher": "^1.0.0",
+        "toobo/type-checker": "^1.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.5.34",
+        "inpsyde/php-coding-standards": "^2@dev",
+        "vimeo/psalm": "^5.26.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "RologIo\\": "src/"
+        },
+        "files": [
+            "./inc/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RologIo\\Tests\\": [
+                "tests/src/",
+                "tests/cases/"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "composer/*": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "cs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "psalm": "@php ./vendor/vimeo/psalm/psalm --no-suggestions --report-show-info=false --find-unused-psalm-suppress --no-diff --no-cache --no-file-cache --output-format=compact",
+        "tests": "@php ./vendor/phpunit/phpunit/phpunit --no-coverage",
+        "qa": [
+            "@cs",
+            "@psalm",
+            "@tests"
+        ]
+    }
+}
