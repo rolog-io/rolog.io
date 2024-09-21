@@ -1,5 +1,7 @@
 # Rolog.io - Event Dispatcher Made Easy
 
+[![Quality Assurance](https://github.com/rolog-io/rolog.io/actions/workflows/quality-assurance.yml/badge.svg)](https://github.com/rolog-io/rolog.io/actions/workflows/quality-assurance.yml)
+
 ---
 
 Rolog.io is *extremely* easy to use:
