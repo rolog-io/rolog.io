@@ -1,6 +1,17 @@
 {
     "name": "rolog.io/rolog.io",
     "description": "A simple PSR-14 implementation",
+    "license": "MIT",
+    "keywords": [
+        "events",
+        "event",
+        "event dispatcher",
+        "events dispatcher",
+        "event-dispatcher",
+        "events-dispatcher",
+        "psr-14"
+    ],
+    "minimum-stability": "stable",
     "require": {
         "php": ">= 8.3 < 8.4",
         "psr/event-dispatcher": "^1.0.0",
