@@ -241,4 +241,4 @@ assert($result->message === 'Hello World');
 
 In real world the objects resolution will probably happen via a DI container, but this should be enough to get anyone started.
 
-It is worth nothing that listeners added via the `RologIo\listen` function, as well as event dispatched via  `RologIo\dispatch` will be completely **independent** from listeners and events handled via Rolog.io objects created "the OOP way".
+It is worth noting that listeners added via the `RologIo\listen` function, as well as event dispatched via  `RologIo\dispatch` will be completely **independent** from listeners and events handled via Rolog.io objects created "the OOP way".
